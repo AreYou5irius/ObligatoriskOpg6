@@ -1,0 +1,9 @@
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\FanOutputLibrary\bin\Debug\netcoreapp3.1\FanOutputLibrary.deps.json
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\FanOutputLibrary\bin\Debug\netcoreapp3.1\FanOutputLibrary.dll
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\FanOutputLibrary\obj\Debug\netcoreapp3.1\FanOutputLibrary.csprojAssemblyReference.cache
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\FanOutputLibrary\obj\Debug\netcoreapp3.1\FanOutputLibrary.AssemblyInfoInputs.cache
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\FanOutputLibrary\obj\Debug\netcoreapp3.1\FanOutputLibrary.AssemblyInfo.cs
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\FanOutputLibrary\bin\Debug\netcoreapp3.1\FanOutputLibrary.pdb
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\FanOutputLibrary\obj\Debug\netcoreapp3.1\FanOutputLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\FanOutputLibrary\obj\Debug\netcoreapp3.1\FanOutputLibrary.dll
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\FanOutputLibrary\obj\Debug\netcoreapp3.1\FanOutputLibrary.pdb

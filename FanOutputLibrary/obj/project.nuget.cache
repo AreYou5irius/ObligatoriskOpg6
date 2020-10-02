@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "J3jd3WavdLg1QOvrBOeHpHhQUN88ujdjKLGnZCQ1QmxrSrTt745coDYy4Qdw2qrCP/pmqchVjYPMPe30N4Rciw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Bruger\\OneDrive\\Skrivebord\\Obligatorisk opg TCP-server\\KlimaServer\\FanOutputLibrary\\FanOutputLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Bruger\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

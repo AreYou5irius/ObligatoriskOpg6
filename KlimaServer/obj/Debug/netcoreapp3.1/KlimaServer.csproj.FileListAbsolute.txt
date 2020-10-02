@@ -1,0 +1,17 @@
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\KlimaServer\bin\Debug\netcoreapp3.1\FanOutputLibrary.dll
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\KlimaServer\obj\Debug\netcoreapp3.1\KlimaServer.csprojAssemblyReference.cache
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\KlimaServer\obj\Debug\netcoreapp3.1\KlimaServer.AssemblyInfoInputs.cache
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\KlimaServer\obj\Debug\netcoreapp3.1\KlimaServer.AssemblyInfo.cs
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\KlimaServer\obj\Debug\netcoreapp3.1\KlimaServer.csproj.CoreCompileInputs.cache
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\KlimaServer\bin\Debug\netcoreapp3.1\KlimaServer.exe
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\KlimaServer\bin\Debug\netcoreapp3.1\KlimaServer.deps.json
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\KlimaServer\bin\Debug\netcoreapp3.1\KlimaServer.runtimeconfig.json
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\KlimaServer\bin\Debug\netcoreapp3.1\KlimaServer.runtimeconfig.dev.json
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\KlimaServer\bin\Debug\netcoreapp3.1\KlimaServer.dll
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\KlimaServer\bin\Debug\netcoreapp3.1\KlimaServer.pdb
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\KlimaServer\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\KlimaServer\bin\Debug\netcoreapp3.1\FanOutputLibrary.pdb
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\KlimaServer\obj\Debug\netcoreapp3.1\KlimaServer.csproj.CopyComplete
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\KlimaServer\obj\Debug\netcoreapp3.1\KlimaServer.dll
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\KlimaServer\obj\Debug\netcoreapp3.1\KlimaServer.pdb
+C:\Users\Bruger\OneDrive\Skrivebord\Obligatorisk opg TCP-server\KlimaServer\KlimaServer\obj\Debug\netcoreapp3.1\KlimaServer.genruntimeconfig.cache
