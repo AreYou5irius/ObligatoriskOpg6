@@ -68,55 +68,67 @@ namespace KlimaServer
             sw.AutoFlush = true;
 
 
-
-            Console.WriteLine("Hvilken Request ønsker du at bruge? HentAlle, Hent eller Gem");
-            string message = sr.ReadLine();
-
-            switch (message)
+            while (true)
             {
 
-                //socketen serialisere listen og initialisere en var variabel
-                //så skriver/sender den variablen til clienten og udskriver til consollen
-                case "HentAlle":
 
-                    var json = JsonConvert.SerializeObject(data);
-                    sw.WriteLine(json);
-                    Console.WriteLine(json);
+                Console.WriteLine("Hvilken Request ønsker du at bruge? HentAlle, Hent eller Gem");
+                string message = sr.ReadLine();
+
+                if (message.ToLower().Contains("luk"))
+                {
                     break;
+                }
+
+                switch (message.ToLower())
+                {
+
+
+                    //socketen serialisere listen og initialisere en var variabel
+                    //så skriver/sender den variablen til clienten og udskriver til consollen
+                    case "hentalle":
+
+                        var json = JsonConvert.SerializeObject(data);
+                        sw.WriteLine(json);
+                        Console.WriteLine(json);
+                        break;
 
 
 
-                // socketen aflæser Id og initialisere en string variabel
-                //den bliver conventeret fra en string til en int
-                //efterfølgende finder socketen listen med matchende id og serialisere listen og initerialiserer en var variable
-                //så skriver/sender den til clienten og udskriver til contollen 
-                case "Hent":
-                    Console.WriteLine("hvilken måling ønsker du at hente? indtast id: ");
-                    string id = sr.ReadLine();
-                    int GetId = Int32.Parse(id);
-                    var json2 = JsonConvert.SerializeObject(data.Find(i => GetId == i.Id));
-                    sw.WriteLine(json2);
-                    Console.WriteLine($"dette er dataen serveren har hentet fra listen på Id nr: " + json2);
+                    // socketen aflæser Id og initialisere en string variabel
+                    //den bliver conventeret fra en string til en int
+                    //efterfølgende finder socketen listen med matchende id og serialisere listen og initerialiserer en var variable
+                    //så skriver/sender den til clienten og udskriver til contollen 
+                    case "hent":
+                        Console.WriteLine("hvilken måling ønsker du at hente? indtast id: ");
+                        string id = sr.ReadLine();
+                        int GetId = Int32.Parse(id);
+                        var json2 = JsonConvert.SerializeObject(data.Find(i => GetId == i.Id));
+                        sw.WriteLine(json2);
+                        Console.WriteLine($"dette er dataen serveren har hentet fra listen på Id nr: " + json2);
 
-                    break;
+                        break;
 
-                //socketen aflæser den data clienten har indtastet og gemmer dem i en ny listen dog hvor den tager hensyn til at conventere til rigtig værditype
-                //bagefter tilføjes den nye liste til vores samling af lister (data)
-                case "Gem":
-                    Console.WriteLine("indtast: Id, Navn, Temp, Fugt adskilt med mellemrum");
-                    string newData = sr.ReadLine();
-                    FanOutput input = new FanOutput(Convert.ToInt32(newData.Split(" ")[0]), newData.Split(" ")[1], Convert.ToDouble(newData.Split(" ")[2]), Convert.ToDouble(newData.Split(" ")[3]));
+                    //socketen aflæser den data clienten har indtastet og gemmer dem i en ny listen dog hvor den tager hensyn til at conventere til rigtig værditype
+                    //bagefter tilføjes den nye liste til vores samling af lister (data)
+                    case "gem":
+                        Console.WriteLine("indtast: Id, Navn, Temp, Fugt adskilt med mellemrum");
+                        string newData = sr.ReadLine();
+                        FanOutput input = new FanOutput(Convert.ToInt32(newData.Split(" ")[0]), newData.Split(" ")[1],
+                            Convert.ToDouble(newData.Split(" ")[2]), Convert.ToDouble(newData.Split(" ")[3]));
 
-                    data.Add(input);
+                        data.Add(input);
 
-                    break;
+                        break;
+
+                }
 
             }
-
 
             stream.Close();
             client.Close();
             Console.WriteLine("connection to client closed");
+
         }
     }
 }
