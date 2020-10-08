@@ -34,6 +34,7 @@ namespace KlimaServer
             //her starter vi vores socket
             socket.Start();
 
+            Console.WriteLine("waiting for connection..");
 
             //vores socket acceptere tcp clients og at der bliver lavet en ny task 
             //når en ny client opretter forbindelse til vores socket på IP og port nr.
@@ -43,8 +44,9 @@ namespace KlimaServer
             //en task bliver oprettet som kører funktionen DoClient
             while (true)
             {
+
                 TcpClient client = socket.AcceptTcpClient();
-                Console.WriteLine("server activated");
+                Console.WriteLine("Connected");
 
                 Task.Run(() => { DoClient(client, clientNr++); });
 
