@@ -12,7 +12,7 @@ using Newtonsoft.Json;
 namespace KlimaServer
 {
     class Server
-    {
+    {   //statisk count der holder styr på klient nr.
         private static int clientNr = 1;
 
         //statisk liste med data.
@@ -28,61 +28,50 @@ namespace KlimaServer
             Int32 port = 4646;
             IPAddress localAddress = IPAddress.Loopback;
 
-            //her laves vores socket der skal "lytte" efter requests med IP adresse og Port nr
+            //her laves vores socket med IP adresse og Port nr, der skal "lytte" efter requests
             TcpListener socket = new TcpListener(localAddress, port);
 
-            //her starter vi vores socket der siger: at så længe der er minimum en client der er forbunndet, er vores socket tændt
-            //vores socket acceptere tcp clients og at der bliver lavet en ny task 
-            //når en ny client opretter forbindelse til vores socket på IP og port nr. 
-
+            //her starter vi vores socket
             socket.Start();
-            do
+
+
+            //vores socket acceptere tcp clients og at der bliver lavet en ny task 
+            //når en ny client opretter forbindelse til vores socket på IP og port nr.
+
+            //her siger vi så længe while condition er true så køres loopet. 
+            //i loopet venter socket på at en client forbindes
+            //en task bliver oprettet som kører funktionen DoClient
+            while (true)
             {
-
                 TcpClient client = socket.AcceptTcpClient();
-
                 Console.WriteLine("server activated");
 
-
                 Task.Run(() => { DoClient(client, clientNr++); });
-                if (clientNr < 1)
-                {
-                    break;
-                }
 
-            } while (clientNr > 0);
+            }
 
-            socket.Stop();
-            Console.WriteLine("server stopped");
         }
+
 
         public static void DoClient(TcpClient client, int clientNr)
         {
-            int Nr = clientNr;
+            int nr = clientNr;
 
-            //her laves forbindelsen
+            //her laves et stream objekt der tilladere at skrive til client og læse fra client
             NetworkStream stream = client.GetStream();
-            //hvor der både kan læses fra clienten og skrives til clienten
+
             StreamReader sr = new StreamReader(stream);
             StreamWriter sw = new StreamWriter(stream);
             sw.AutoFlush = true;
 
-
+            //Her kan klienten skrive hvilken forspørgelse de ønsker og få svar retur
             while (true)
             {
-
-
-                Console.WriteLine("Hvilken Request ønsker du at bruge? HentAlle, Hent eller Gem");
+                Console.WriteLine($"Velkommen til Klient: {nr}. Hvilken Request ønsker du at bruge? HentAlle, Hent eller Gem");
                 string message = sr.ReadLine();
-
-                if (message.ToLower().Contains("luk"))
-                {
-                    break;
-                }
 
                 switch (message.ToLower())
                 {
-
 
                     //socketen serialisere listen og initialisere en var variabel
                     //så skriver/sender den variablen til clienten og udskriver til consollen
@@ -121,6 +110,12 @@ namespace KlimaServer
 
                         break;
 
+                }
+
+                if (message.ToLower().Contains("luk"))
+                {
+                    Server.clientNr--;
+                    break;
                 }
 
             }
